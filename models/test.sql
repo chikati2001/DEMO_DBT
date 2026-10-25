@@ -1,4 +1,4 @@
 select 
 * 
-from {{ source('demo', 'BIKE_TABLE') }}
+from {{ source('DEMO', 'BIKE_TABLE') }}
 limit 10
