@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_retail_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: region
+        tests:
+          - accepted_values:
+              values: ['North', 'South', 'East', 'West']
+      - name: revenue
+        tests:
+          - not_null
