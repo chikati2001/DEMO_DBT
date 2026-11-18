@@ -9,4 +9,4 @@ SELECT
     discount,
     region,
     revenue
-FROM {{ source('fivetran_src', 'retail_orders') }}
+FROM {{ source('snowflake_raw', 'retail_orders') }}
